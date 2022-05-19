@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: "#FA4A0C",
+          DEFAULT: "#f9b532",
           100: "rgba(246, 99, 48, 0.1)",
           200: "rgba(246, 99, 48, 0.2)",
           300: "rgba(246, 99, 48, 0.3)",
@@ -36,7 +36,7 @@ module.exports = {
           200: "#bebebe",
         },
         background: "#dedede",
-        orange: "#FA4A0C",
+        orange: "#f9b532",
         secondary: {
           DEFAULT: "#FFF4E3",
         },

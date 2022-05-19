@@ -1,15 +1,15 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import Header from "./Header";
-import SideBar from "./SideBar";
+import SideBar from "./Sidebar";
 
 const Template = () => {
-  const token = localStorage.getItem("token");
+  // const token = localStorage.getItem("token");
 
-  if (!token) {
-    localStorage.clear();
-    return <Navigate to="/" />;
-  }
+  // if (!token) {
+  //   localStorage.clear();
+  //   return <Navigate to="/" />;
+  // }
 
   return (
     <div

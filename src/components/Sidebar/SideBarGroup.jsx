@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { SidebarGroupProps } from "../../ts/interfaces/app_interfaces";
-import Collapsible from "./SideBar/Collapsible";
-import Menu from "./SideBar/Menu";
+import Collapsible from "./Collapsible";
+import Menu from "./Menu";
 
-// const [arrayState, setArrayState] = useState(activeState)
 const SideBarGroup = ({ title, items }) => {
   const activeState = Array.from({ length: items ? items?.length : 0 }).fill({
     active: false,
@@ -19,6 +17,17 @@ const SideBarGroup = ({ title, items }) => {
             <hr className="text-black-400 w-full" />
           </div>
         )}
+
+        {items &&
+          items.map((i, k) => (
+            <React.Fragment key={k}>
+              {i.dropdownItems ? (
+                <Collapsible menuInfo={i} />
+              ) : (
+                <Menu menuInfo={i} />
+              )}
+            </React.Fragment>
+          ))}
       </ul>
     </div>
   );
